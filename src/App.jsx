@@ -65,7 +65,7 @@ export const ProtectedUserRoutes = ({ children }) => {
   if (user) {
     return children;
   } else {
-    return <Navigate to={"/login"} />;
+    return <Navigate to={"/"} />;
   }
 };
 
@@ -75,6 +75,6 @@ export const ProtectedAdminRoutes = ({ children }) => {
   if (admin.user.email === "shah208@gmail.com") {
     return children;
   } else {
-    return <Navigate to={"/login"} />;
+    return <Navigate to={"/"} />;
   }
 };

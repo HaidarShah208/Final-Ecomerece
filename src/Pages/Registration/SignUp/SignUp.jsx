@@ -21,12 +21,12 @@ function Signup() {
     const { loading, setLoading } = context;
     
     const signup= async()=>{
-        setLoading(true)
         if (name === "" || email === "" || password === "") {
             return toast.error("All fields are required")
         }
 
         try{
+        setLoading(true)
             const users = await createUserWithEmailAndPassword(auth, email, password);
             console.log(users)
             const user = {
@@ -42,7 +42,7 @@ function Signup() {
             setEmail("");
             setPassword("");
             setLoading(false)
-            navigate('/login')
+            navigate('/')
             
         }catch(error){
        console.log(error)
@@ -99,7 +99,7 @@ function Signup() {
                     </button>
                 </div>
                 <div>
-                    <h2 className='text-white'>Have an account <Link className=' text-red-500 font-bold' to={'/login'}>Login</Link></h2>
+                    <h2 className='text-white'>Have an account <Link className='text-red-500 font-bold' to={'/'}>Login</Link></h2>
                 </div>
             </div>
         </div>

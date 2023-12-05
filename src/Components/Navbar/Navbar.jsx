@@ -87,14 +87,14 @@ function Navbar() {
                 }
 
                 <div className="flow-root">
-               {user?  <Link to={'/lgoin'}> 
+               {user?  <Link to={'/'}> 
                 <a onClick={logout} className="-m-2 block p-2 font-medium text-gray-900 cursor-pointer" style={{ color: mode === 'dark' ? 'white' : '', }}>
                     Logout
                   </a>
                </Link>:""}
                 </div>
                 <div className="flow-root">
-                  <Link to={'/'} className="-m-2 block p-2 font-medium text-gray-900 cursor-pointer">
+                  <Link to={'/home'} className="-m-2 block p-2 font-medium text-gray-900 cursor-pointer">
                     <img
                       className="inline-block w-10 h-10 rounded-full"
                       src={ali}
@@ -149,7 +149,7 @@ function Navbar() {
               </button> 
               {/* Logo */}
               <div className="ml-4 flex lg:ml-0">
-                <Link to="/" className="flex">
+                <Link to="/home" className="flex">
                   <div className="flex ">
                     <h1
                       className=" text-2xl font-bold text-black  px-2 py-1 rounded"
@@ -178,7 +178,7 @@ function Navbar() {
                   </Link> : ""
                 }
 
-                  <Link to='/login'>
+                  <Link to='/'>
                   <a onClick={logout}
                     className="text-sm font-medium text-gray-700 cursor-pointer  "
                     style={{ color: mode === "dark" ? "white" : "" }}>
