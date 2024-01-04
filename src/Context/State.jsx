@@ -192,6 +192,6 @@ function State(props) {
         </myContext.Provider>
     </div>
   )
-}
+} 
 
 export default State
